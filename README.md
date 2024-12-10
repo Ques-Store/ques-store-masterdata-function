@@ -25,12 +25,13 @@ This repository contains code for deploying the master data function into fireba
    npm install
    
 # Place the sdk-key under src/sdk-key
+   Path and File name: /sdk-key/service-account.json
 
 5. Deploy the functions to firebase
    ```bash
    firebase deploy --only functions
 
-## Test the deployed function 
+## Test the deployed function in postman
    ```bash
    curl --location 'https://us-central1-ques-store.cloudfunctions.net/masterdataApi/graphql'
    --header 'Content-Type: application/json'
