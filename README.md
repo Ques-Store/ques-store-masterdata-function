@@ -1,34 +1,36 @@
-# Firebase Functions Deployment
+# Master Data Functions Deployment
 
-This repository contains Firebase Cloud Functions for handling application-specific logic. Follow the steps below to set up and deploy the functions.
+This repository contains code for deploying the master data function into firebase. Follow the steps below to set up and deploy the function.
 
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) installed.
-- [Firebase CLI](https://firebase.google.com/docs/cli) installed globally.
-- A Firebase project set up.
 
 ## Steps to Deploy
 
-1. Clone the repository:
+1. Clone the repository
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Ques-Store/ques-store-masterdata-function.git
 
 2. Navigate to the functions directory
-cd functions
+   ```bash
+   cd functions
 
-3. Install the Firebase CLI globally:
-
-npm install -g firebase-tools
+3. Install the Firebase CLI globally
+   ```bash
+   npm install -g firebase-tools
 
 4. Install necessary dependencies
-
-npm install 
+   ```bash
+   npm install 
 
 5. Deploy the functions to firebase
-
-firebase deploy --only functions
+   ```bash
+   firebase deploy --only functions
 
 ## Test the deployed function 
-
+   ```bash
+   curl --location 'https://us-central1-ques-store.cloudfunctions.net/masterdataApi/graphql'
+   --header 'Content-Type: application/json'
+   --data '{"query":"{ masterData { data } }","variables":{}}'
 
