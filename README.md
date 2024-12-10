@@ -24,10 +24,11 @@ This repository contains code for deploying the master data function into fireba
    ```bash
    npm install
    
-# Place the sdk-key under src/sdk-key
+### 5. Download the sdk-key from Firebase and place the sdk-key under src/sdk-key
+   ```bash
    Path and File name: /sdk-key/service-account.json
 
-5. Deploy the functions to firebase
+6. Deploy the functions to firebase
    ```bash
    firebase deploy --only functions
 
