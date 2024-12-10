@@ -22,7 +22,9 @@ This repository contains code for deploying the master data function into fireba
 
 4. Install necessary dependencies
    ```bash
-   npm install 
+   npm install
+   
+# Place the sdk-key under src/sdk-key
 
 5. Deploy the functions to firebase
    ```bash
